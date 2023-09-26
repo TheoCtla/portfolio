@@ -115,11 +115,12 @@ ul {
     font-size: 20px;
 }
 
-a:hover {
+#a:hover {
     color: #AC53D8;
+    position: relative;
 }
 
-a::before {
+#a::before {
     content: "";
     position: absolute;
     display: block;
@@ -132,7 +133,7 @@ a::before {
     transition: transform 0.3s ease;
 }
 
-a:hover::before {
+#a:hover::before {
     transform: scaleX(1);
 }
 
