@@ -59,7 +59,7 @@ h2 {
 }
 
 #homePage h2 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /* -- NAVBAR */
@@ -75,6 +75,10 @@ header {
     width: 100%;
     background-color: #D9D9D9;
     padding-top: 5px;
+}
+.dark {
+    background-color: #26292B;
+    color: #D9D9D9;
 }
 
 a {
@@ -112,7 +116,7 @@ ul {
 }
 
 .navbar a {
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
 #a:hover {
@@ -145,14 +149,11 @@ ul {
     background-color: #D9D9D9;
 }
 
-#aPropos h3 {
+h3 {
     font-weight: normal
 }
 
 .containeraPropos {
-    padding-left: 65px;
-    padding-top: 65px;
-    padding-right: 65px;
     position: relative;
 }
 
@@ -179,26 +180,34 @@ ul {
     font-size: 1.5em;
 }
 
-.containeraPropos h3 {
-    font-size: 2.5em;
+h3 {
+    font-size: 3em;
+    padding-top: 50px;
+    padding-left: 30px;
 }
 
-.paraaPropos {
+.paragraphe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 75px;
+
 }
 
+.paragraphe p {
+    font-size: 1.8rem;
+}
 
+.skillFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 70px;
-    padding-left: 115px;
-    padding-top: 75px;
+    grid-gap: 150px;
 
 }
 
@@ -217,4 +226,25 @@ ul {
     font-size: 1.2em;
     color: #D9D9D9;
     text-align: center;
+}
+
+.h3Dark {
+    color: #D9D9D9;
+}
+
+#Projet {
+    width: 100%;
+    height: 100%;
+    background-color: #26292B;
+}
+
+.projet {
+    width: 250px;
+    height: 200px;
+    border: #D9D9D9 solid 1px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
