@@ -34,7 +34,8 @@
     <meta property="og:description"
         content="Portfolio de Théo Catala, actuellement en 3ème année d'informatique à Sophia Ynov Campus">
     <meta property="og:url" content="">
-    <script src=""></script>
+    <script src="./JS/index.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="./CSS/style.css" type="text/css" media="screen" />
     <!-- <link rel="stylesheet" href="./CSS/reset.css"> -->
     <link rel="icon" type="" href="" />
@@ -42,15 +43,27 @@
 </head>
 
 <body>
-    <div id="homePage">
-        <h1>THÉO CATALA</h1>
+    <!-- <div id="homePage">
+        <h1 id="text">THÉO CATALA</h1>
         <h2>Étudiant en développement web</h2>
+        <a href="#aPropos">
+            <img src="./Assets/IMG/arrow.svg" alt="">
+        </a>
+    </div> -->
+    <div id="homePage" class="homePageClass">
+        <div class="centered-content">
+            <h1 id="text">THÉO CATALA</h1>
+            <h2>Étudiant en développement web</h2>
+        </div>
+        <a href="#aPropos">
+            <img src="./Assets/IMG/arrow.svg" alt="">
+        </a>
     </div>
     <div id="aPropos">
         <header>
             <nav>
                 <div class="logo">
-                    <img src="./Assets/IMG/home_black.svg" alt="Logo Théo Catala">
+                    <a href="#homePage"><img src="./Assets/IMG/home_black.svg" alt="Logo Théo Catala"></a>
                 </div>
                 <div class="navbar">
                     <ul>
@@ -118,27 +131,149 @@
             <div class="skillFlex">
                 <div class="grid">
                     <div class="projet">
-
+                        <h4>Titre du projet</h4>
+                        <p>Rapide description du projet</p>
+                        <a href="https://github.com/TheoCtla"><button>Voir plus</button></a>
                     </div>
                     <div class="projet">
-
+                        <h4>Titre du projet</h4>
+                        <p>Rapide description du projet</p>
+                        <a href=""><button>Voir plus</button></a>
                     </div>
                     <div class="projet">
-
+                        <h4>Titre du projet</h4>
+                        <p>Rapide description du projet</p>
+                        <a href=""><button>Voir plus</button></a>
                     </div>
                     <div class="projet">
-
+                        <h4>Titre du projet</h4>
+                        <p>Rapide description du projet</p>
+                        <a href=""><button>Voir plus</button></a>
                     </div>
                     <div class="projet">
-
+                        <h4>Titre du projet</h4>
+                        <p>Rapide description du projet</p>
+                        <a href=""><button>Voir plus</button></a>
                     </div>
                     <div class="projet">
-                        
+                        <h4>Titre du projet</h4>
+                        <p>Rapide description du projet</p>
+                        <a href=""><button>Voir plus</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="Stage">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#homePage"><img src="./Assets/IMG/home_black.svg" alt="Logo Théo Catala"></a>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a id="a" href="#aPropos">À Propos</a></li>
+                        <li><a id="a" href="#Projet">Mes Projets</a></li>
+                        <li><a id="a" href="#Stage">Stage</a></li>
+                        <li><a id="a" href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="containerStage">
+            <h3>Stage</h3>
+            <div class="semaines">
+                <div class="semaine1">
+                    <div class="week">
+                        <h5>Semaine 1</h5>
+                        <p>Tout d'abord, j'ai commencé à me renseigner sur l'entreprise son secteur d'activité ainsi que
+                            ses
+                            besoins pour le site web. J'ai beaucoup discuté avec ma maître de stage pour savoir ce
+                            qu'elle
+                            attendait d'un site web et de comprendre ce qu'elle voulait changer de son ancien site.
+                            Pour finir, j'ai regardé des sites concurents pour savoir et comprendre les pratiques de ce
+                            milieu pour comprendre ce qu'il plait aux clients et le reproduire sur son site.</p>
+                    </div>
+                    <div class="week">
+                        <h5>Semaine 2</h5>
+                        <p>Lors de cette semaine, j'ai choisi les structures et les fonctionnalités. En effet j'ai
+                            choisi le
+                            template WordPress et les fonctionnalités qui corresopndaient au mieux aux besoins de
+                            L'Arbre à
+                            Bulles en fonction aussi des sites concurents.
+                            J'ai demandé les textes ainsi que les photos que ma maître de stage voulait avoir dans son
+                            site.
+                            Je les ai ensuite organisés et nous avons discuté sur le choix de certaines photos et textes
+                            à
+                            modifier ou à changer.</p>
+                    </div>
+                    <div class="week">
+                        <h5>Semaine 3</h5>
+                        <p>Pendant la troisième semaine, j'ai commencé le développement du site avec la création des
+                            pages
+                            principales, l'intégration des contenus et la personnalisation de l'UX/UI.
+                            J'ai mis en place le menu de navigation avec les différentes sections du site pour que les
+                            utilisateurs puissent naviguer simplement susr le site.
+                        </p>
+                    </div>
+                </div>
+                <div class="semaine2">
+                    <div class="week">
+                        <h5>Semaine 4</h5>
+                        <p>Pour cette semaine, j'ai continué le développement du site en ajoutant des fonctionnalités
+                            spécifiques comme le formulaire de contact ou la galerie d'image.
+                            J'y ai aussi intégré les autres réseaux sociaux de l'entreprise pour faciliter le partage de
+                            contenu
+                            et faire par la même occasion de la pub.</p>
+                    </div>
+                    <div class="week">
+                        <h5>Semaine 5</h5>
+                        <p>Sur la semaine 5, j'ai fait des tests et des optimisations sur les différents navigateurs
+                            pour
+                            certains problèmes d'affichages et d'érgonomie.</p>
+                    </div>
+                    <div class="week">
+                        <h5>Semaine 6</h5>
+                        <p>Cette semaine j'ai finalisé le site, apporté les dernières modifications.
+                            Je lui ai ensuite montré et nous avons discuté et changé les derniers détails pour qu'elle
+                            soit
+                            entièrement satisfaite du site.
+                            Je n'ai pas mis en ligne le site car lorsque j'avais fini mon stage, il lui restait encore
+                            quelques
+                            modifications à apporter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Contact">
+        <h3>Me contacter</h3>
+        <div class="info">
+            <a href="">
+                <img src="./Assets/IMG/linkedin.svg" alt="">
+                <p>Théo Catala</p>
+            </a>
+        </div>
+        <div class="info">
+            <a href="">
+                <img src="./Assets/IMG/github.svg" alt="">
+                <p>TheoCtla</p>
+            </a>
+        </div>
+        <div class="info">
+            <a href="">
+                <img src="./Assets/IMG/mail.svg" alt="">
+                <p>tcatala32@gmail.com</p>
+            </a>
+        </div>
+        <div class="info">
+            <a href="tel:+33695190748">
+                <img src="./Assets/IMG/phone.svg" alt="">
+                <p>06 95 19 07 48</p>
+            </a>
+        </div>
+    </div>
+
 </body>
 
 </html>
