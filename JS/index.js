@@ -1,4 +1,5 @@
 function typeWriter(element) {
+    let anim = true;
     return new Promise(resolve => {
         const text = element.textContent.trim();
         element.textContent = "";
@@ -20,7 +21,12 @@ async function startAnimation() {
     setTimeout(() => {
         const nextDiv = document.querySelector("#aPropos");
         nextDiv.scrollIntoView({ behavior: "smooth" }); // Faire défiler jusqu'au div d'en dessous
+        anim = false
     }, 2000); // Attendre 2 secondes après la fin de l'animation
 }
+// if (anim == false){
+//     await new Promise(resolve => setTimeout(resolve, 1500));
+//     document.getElementById("homePage").style.display = "none";
+// }
 
 startAnimation();
