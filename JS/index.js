@@ -1,26 +1,20 @@
 function typeWriter(element) {
-    return new Promise(resolve => {
-        const text = element.textContent.trim();
-        element.textContent = "";
+    element.classList.add("hidden"); // Masquer l'élément initialement
+    setTimeout(() => {
+        const text = element.textContent;
+        element.textContent = ""; // Effacez le texte de l'élément
+        element.classList.remove("hidden"); // Rendre l'élément visible avant d'écrire
         let index = 0;
         const intervalId = setInterval(() => {
             element.textContent += text[index];
             index++;
             if (index >= text.length) {
                 clearInterval(intervalId);
-                resolve(); // Résoudre la promesse lorsque l'animation est terminée
             }
-        }, 110);
-    });
+        }, 110); // Délai entre chaque lettre : 110 ms
+    }, 1775); // Attendre 1.775 secondes (1775 millisecondes) avant de commencer
 }
 
-async function startAnimation() {
-    const title = document.querySelector("#myText");
-    await typeWriter(title); // Attendre la fin de l'animation de la machine à écrire
-    setTimeout(() => {
-        const nextDiv = document.querySelector("#nextDiv");
-        nextDiv.scrollIntoView({ behavior: "smooth" }); // Faire défiler jusqu'au div d'en dessous
-    }, 2000); // Attendre 2 secondes après la fin de l'animation
-}
-
-startAnimation();
+const title = document.querySelector("h2");
+title.classList.add("hidden"); // Masquer l'élément initialement
+typeWriter(title);
