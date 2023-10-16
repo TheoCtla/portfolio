@@ -1,13 +1,26 @@
-// const txtAnim = document.querySelector('h1');
-
-//  console.log(new Typewriter(txtAnim));
-
-document.addEventListener('DOMContentLoaded', function() {
-    var homePage = document.getElementById('homePage');
-
-    homePage.addEventListener('wheel', function(event) {
-        event.preventDefault();
+function typeWriter(element) {
+    return new Promise(resolve => {
+        const text = element.textContent.trim();
+        element.textContent = "";
+        let index = 0;
+        const intervalId = setInterval(() => {
+            element.textContent += text[index];
+            index++;
+            if (index >= text.length) {
+                clearInterval(intervalId);
+                resolve(); // Résoudre la promesse lorsque l'animation est terminée
+            }
+        }, 110);
     });
-});
+}
 
+async function startAnimation() {
+    const title = document.querySelector("#myText");
+    await typeWriter(title); // Attendre la fin de l'animation de la machine à écrire
+    setTimeout(() => {
+        const nextDiv = document.querySelector("#nextDiv");
+        nextDiv.scrollIntoView({ behavior: "smooth" }); // Faire défiler jusqu'au div d'en dessous
+    }, 2000); // Attendre 2 secondes après la fin de l'animation
+}
 
+startAnimation();
